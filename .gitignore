@@ -1,0 +1,39 @@
+# Environment variables and secrets (CRITICAL: Do NOT commit secrets)
+.env
+.env.*
+!.env.example
+
+# Python Virtual Environment & Caches
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Frontend Dependencies & Build Output
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+dist-ssr/
+
+# Temporary / Scratch files & Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+scratch/
+.system_generated/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
