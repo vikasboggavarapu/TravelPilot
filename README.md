@@ -371,7 +371,6 @@ pytest tests/test_tools.py -v
 pytest tests/test_services.py -v
 pytest tests/test_api.py -v
 ```
-
 ---
 
 ## 🗄️ Database Schema
