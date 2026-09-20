@@ -177,24 +177,24 @@ export default function PlanTrip() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   <h2 style={{ fontSize: '1.3rem', marginBottom: 4 }}>Where are you going? 🌍</h2>
                   <div>
-                    <label style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: 6, display: 'block' }}>Destination *</label>
+                    <label style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: 6, display: 'block' }}>Destination </label>
                     <input className="input" placeholder="e.g. Paris, France" value={form.destination}
                       onChange={e => update('destination', e.target.value)} />
                   </div>
                   <div>
-                    <label style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: 6, display: 'block' }}>Flying from (optional)</label>
+                    <label style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: 6, display: 'block' }}>Flying from </label>
                     <input className="input" placeholder="e.g. London, UK" value={form.origin_city}
                       onChange={e => update('origin_city', e.target.value)} />
                   </div>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
                     <div>
-                      <label style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: 6, display: 'block' }}>Check-in *</label>
+                      <label style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: 6, display: 'block' }}>From</label>
                       <input className="input" type="date" value={form.start_date}
                         min={new Date().toISOString().split('T')[0]}
                         onChange={e => update('start_date', e.target.value)} />
                     </div>
                     <div>
-                      <label style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: 6, display: 'block' }}>Check-out *</label>
+                      <label style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: 6, display: 'block' }}>To</label>
                       <input className="input" type="date" value={form.end_date}
                         min={form.start_date || new Date().toISOString().split('T')[0]}
                         onChange={e => update('end_date', e.target.value)} />

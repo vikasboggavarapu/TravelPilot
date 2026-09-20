@@ -57,14 +57,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            padding: '6px 16px', borderRadius: 100,
-            background: 'rgba(0,212,170,0.1)', border: '1px solid rgba(0,212,170,0.3)',
-            marginBottom: 24, fontSize: '0.85rem', color: 'var(--teal)',
-          }}>
-            <Sparkles size={14} /> Powered by Gemini AI + LangGraph
-          </div>
+         
 
           <h1 style={{ marginBottom: 20, lineHeight: 1.1 }}>
             Your AI Travel Guide<br />
@@ -72,7 +65,7 @@ export default function Home() {
               background: 'linear-gradient(135deg, var(--teal), #00FFCC)',
               WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
             }}>
-              From Dream to Destination
+              Your Dream to Destination
             </span>
           </h1>
 
@@ -101,7 +94,7 @@ export default function Home() {
           transition={{ delay: 0.5, duration: 0.6 }}
           style={{ display: 'flex', gap: 40, marginTop: 60, flexWrap: 'wrap', justifyContent: 'center' }}
         >
-          {[['∞', 'Destinations'], ['24/7', 'Available'], ['Real-time', 'Disruption Mgmt']].map(([val, lab]) => (
+          {[['24/7', 'Available'], ['Real-time', 'Disruption Mgmt']].map(([val, lab]) => (
             <div key={lab} style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '1.8rem', fontWeight: 700, color: 'var(--teal)' }}>{val}</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{lab}</div>
