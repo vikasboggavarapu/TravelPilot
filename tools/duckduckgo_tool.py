@@ -113,31 +113,6 @@ def check_visa_requirements(nationality: str, destination: str) -> dict:
         return {"nationality": nationality, "destination": destination, "error": str(e)}
 
 
-def get_local_emergency_info(city: str, country: str) -> dict:
-    """
-    Get emergency numbers and important contacts for a destination.
-    """
-    query = f"Emergency numbers {city} {country} police ambulance fire tourist helpline"
-
-    try:
-        with DDGS() as ddgs:
-            results = list(ddgs.text(query, max_results=3))
-
-        combined = " ".join(r.get("body", "") for r in results[:2])
-
-        # Extract phone number patterns
-        phones = re.findall(r'\b(?:\+?\d{1,3}[\s\-]?)?\(?\d{2,4}\)?[\s\-]?\d{3,4}[\s\-]?\d{3,4}\b', combined)
-
-        return {
-            "city": city,
-            "country": country,
-            "emergency_info": combined[:500],
-            "phone_numbers_found": list(set(phones[:6])),
-        }
-
-    except Exception as e:
-        return {"city": city, "country": country, "error": str(e)}
-
 
 # Alias for backwards compatibility with tests
 search_location = get_location_info
