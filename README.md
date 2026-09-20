@@ -80,7 +80,6 @@ TravelPilot is an **AI-powered travel planning and itinerary management agent**.
 │                        └──► conversation_history                     │
 └─────────────────────────────────────────────────────────────────────┘
 ```
-
 ---
 
 ## 🛠️ Tech Stack
@@ -387,7 +386,6 @@ pytest tests/test_api.py -v
 | `conversation_history` | Full chat history per trip (multi-turn Gemini context) |
 
 ---
-
 
 ## 📄 License
 
